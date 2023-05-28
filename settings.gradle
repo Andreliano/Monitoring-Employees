@@ -1,0 +1,10 @@
+rootProject.name = 'Monitoring'
+include 'model'
+include 'networking'
+include 'persistence'
+include 'server'
+include 'services'
+include 'clientFX'
+include 'bossClientFX'
+include 'employeeClientFX'
+
