@@ -285,7 +285,9 @@ public class ServicesRpcProxy implements IServices {
 
     private void handleUpdateTable() {
         try {
-            client1.addEmployee();
+            if(client1 != null) {
+                client1.addEmployee();
+            }
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -293,7 +295,9 @@ public class ServicesRpcProxy implements IServices {
 
     private void handleUpdateNumberOfCompletedTasksFromTable() {
         try {
-            client1.updateNumberOfCompletedTasks();
+            if(client1 != null) {
+                client1.updateNumberOfCompletedTasks();
+            }
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -301,7 +305,9 @@ public class ServicesRpcProxy implements IServices {
 
     private void handleUpdateList() {
         try {
-            client2.addTask();
+            if(client2 != null) {
+                client2.addTask();
+            }
         } catch (Exception ex) {
             ex.printStackTrace();
         }

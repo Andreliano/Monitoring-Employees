@@ -115,7 +115,7 @@ public class ClientRpcWorker implements Runnable, IObserver {
                 response = solveUpdateNumberOfCompletedTasks(request);
             }
             case UPDATE_NUMBER_OF_COMPLETED_TASKS_FROM_TABLE -> {
-                response = solveUpdateNumberOfCompletedTasksFromTable(request);
+                response = solveUpdateNumberOfCompletedTasksFromTable();
             }
         }
         return response;
@@ -258,7 +258,7 @@ public class ClientRpcWorker implements Runnable, IObserver {
         }
      }
 
-     private Response solveUpdateNumberOfCompletedTasksFromTable(Request request){
+     private Response solveUpdateNumberOfCompletedTasksFromTable(){
          try{
              server.updateNumberOfCompletedTasksFromTable();
              return new Response.Builder().type(ResponseType.OK).build();
